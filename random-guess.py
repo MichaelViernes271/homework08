@@ -10,7 +10,7 @@ import random
 def main():
     randgen_num = random.randint(0, 101)
     print("Random Generatad Number (0 - 100): ????")
-    print("The random number: " + str(randgen_num))
+    # print("The random number: " + str(randgen_num))
     while True:
         userinput = int(input("Guess the number: "))
         if userinput > randgen_num and userinput < 101:
