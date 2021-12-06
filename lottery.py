@@ -21,7 +21,23 @@ def randomgen(): # Uses list comprehension in generating random numbers.
 # End of function
 
 def validate(user_guess, gen_nums): # Matches the input if correct and returns user success.
+    correct = 0
+    
+    print(f"""
+    Here are my guesses: {user_guess}
+    Here are the generated numbers: {gen_nums}
+    """)
+    
+    for i in range(3):
+        if user_guess[i] == gen_nums[i]:
+            correct += 1
+        else:
+            continue
 
+    if correct == 3: return True
+    else: return False
+    
+# End of function
     
 def main():
     my_guess = userinput()
