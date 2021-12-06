@@ -11,7 +11,17 @@ def main():
     randgen_num = random.randint(0, 101)
     print("Random Generatad Number (0 - 100): ????")
     print("The random number: " + str(randgen_num))
-
+    while True:
+        userinput = int(input("Guess the number: "))
+        if userinput > randgen_num and userinput < 101:
+            print("Your guess is a bit too high.")
+        elif userinput < randgen_num:
+            print("Youra guess is a bit too low.")
+        elif userinput > 101:
+            print("Aren't you out of bounds?")
+        elif userinput == randgen_num:
+            print("\nYou got it right!\n")
+            return False
         
 # End of function.
 
